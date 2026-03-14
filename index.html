@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="light">
+
+  <div class="container">
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+
+    <!-- Greeting -->
+    <section class="card greeting-card">
+      <h1 id="greeting-text">Good Morning</h1>
+      <div id="time-display" class="time">12:00:00 AM</div>
+      <div id="date-display" class="date">Monday, January 1</div>
+    </section>
+
+    <!-- Focus Timer -->
+    <section class="card timer-card">
+      <h2>Focus Timer</h2>
+      <div id="timer-display" class="timer-display">25:00</div>
+      <div class="timer-controls">
+        <button id="timer-start" class="btn btn-success">Start</button>
+        <button id="timer-stop" class="btn btn-warning">Stop</button>
+        <button id="timer-reset" class="btn btn-danger">Reset</button>
+      </div>
+      <div id="timer-complete" class="timer-complete hidden">✓ Session Complete!</div>
+    </section>
+
+    <!-- To-Do List -->
+    <section class="card tasks-card">
+      <div class="section-header">
+        <h2>To-Do List</h2>
+        <div class="sort-controls">
+          <button id="sort-status" class="btn btn-sm">📋 Status</button>
+          <button id="sort-alpha" class="btn btn-sm">🔤 A–Z</button>
+        </div>
+      </div>
+      <form id="task-form" class="input-row">
+        <input type="text" id="task-input" placeholder="Add a new task…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="card links-card">
+      <h2>Quick Links</h2>
+      <form id="link-form" class="input-row">
+        <input type="text" id="link-name" placeholder="Name" autocomplete="off">
+        <input type="url" id="link-url" placeholder="https://…" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      <div id="links-list" class="links-list"></div>
+    </section>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
